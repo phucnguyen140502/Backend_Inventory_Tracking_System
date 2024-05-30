@@ -20,7 +20,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	// Configure CORS
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{""}                                       // Allow all origins
+	config.AllowOrigins = []string{"https://frontend-inventory-tracking-system.vercel.app/"}                                       // Allow all origins
 	config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"} // Allow all HTTP methods
 	config.AllowHeaders = []string{"Authorization", "Content-Type"}           // Allow Authorization and Content-Type headers
 	router.Use(cors.New(config))
